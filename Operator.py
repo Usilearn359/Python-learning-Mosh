@@ -10,3 +10,7 @@ mylist2=['a','b','c']
 mylist3=[100,200,300]
 combine= list(zip(mylist1, mylist2,mylist3))
 print(combine)
+
+from random import randint
+a=randint(1,100)
+print(a)
