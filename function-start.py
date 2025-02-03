@@ -65,3 +65,15 @@ my_func(fruit='apple')
 def my_func(*args,**kwargs):
     print('I would like to eat {} {}'.format(args[1],kwargs['food']))
 my_func(10,20,30,40, fruit='banana', drink='juice', food='Pizza ')
+
+def myfunc(*args):
+    print(args)
+    list_even=[]
+    for index in args:
+        print(index)
+        if index%2==0:
+            list_even.append(index)
+    return list_even
+    
+result= myfunc(1,2,10,13,100,20,5,21,30)
+print(result)
