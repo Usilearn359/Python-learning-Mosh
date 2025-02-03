@@ -46,3 +46,22 @@ mylist=['','O','']
 mixedup=my_list(mylist)
 guess=user_guess()
 check_guess(mixedup,guess)
+
+# Arguments and Keyward #Args return tuple while Kwargs return dictionary 
+def my_func(*args):
+    print(args)
+    return sum(args)*0.05 
+result=my_func(100,200,300,400,500)
+print(result)
+
+def my_func(**kwargs):
+    if 'fruit' in kwargs:
+        print(kwargs)
+        print('my fruit of choice is {}'.format(kwargs['fruit']))
+    else:
+        print('no fruit')
+my_func(fruit='apple')
+
+def my_func(*args,**kwargs):
+    print('I would like to eat {} {}'.format(args[1],kwargs['food']))
+my_func(10,20,30,40, fruit='banana', drink='juice', food='Pizza ')
