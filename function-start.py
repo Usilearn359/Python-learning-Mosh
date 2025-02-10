@@ -169,13 +169,99 @@ def is_num(n):
 result=is_num(205)
 print(result)
 
-def is_same(arr):
-    for num in arr:
-        if num==num+1:
+def has_33(arr):   
+    for num in range(len(arr)):
+        
+        if arr[num]==3 and arr[num+1]==3:
+            
             return True
-        else:
-            pass
-res=is_same([1,2,3,3])
+            num+=1
+    
+    return False
+res=has_33([1,3,4,8,3,3])
 print(res)
+
+def lets_repeat(word):
+    out=[]
+    for letter in word:
+        out.append(letter*3)
+    return ''.join(out)
+result=lets_repeat('Hello')
+print(result)        
+    
+def myfunc(a,b,c):
+    if a+b+c<=21:
+        return a+b+c
+    elif a==11 or b==11 or c==11:
+        a+b+c-10>=21    
+        sum= a+b+c-10
+        return sum
+    elif a+b+c>21:
+        return 'Blast'
+        
+    
+result=myfunc(10,10,10)
+print(result)
+
+# def sum_(*args):
+#     for num in args:
+#         if args[num]<6 and args[num]>9:
+#             return sum(num)
+# result=sum_(1,2,3,6,9,10)
+# print(result)
+
+def game(mylist):
+    out=[]
+    for i in range(len(mylist)):
+        print(i)
+        if i==0:
+            out.append(i)
+        elif i+1==0:
+            out.append(i)
+        elif i+2==7:
+            out.append(i)
+        return True
+    else:
+        return False
+
+    
+result=game([1,3,1,8,1,2,0,7])
+print(result)
+# numbers =list(range(1,50))
+# print(numbers)
+def myfunc(numbers):
+    out=[]
+    for num in numbers:
+        if numbers[num]%num==0:
+            print(numbers)
+            print(num)
+            out.append(numbers)
+        return out
         
         
+result=myfunc(list(range(1,50)))
+print(result)  
+
+def count_primes(num):
+    primes = [2]
+    x = 3
+    if num < 2:  # for the case of num = 0 or 1
+        return 0
+    while x <= num:
+        
+        for y in range(3,x,2):  # test all odd factors up to x-1
+            print(num)
+            print('x:',x)
+            print('y:',y)
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
+result=count_primes(20)
+print(result)
+    
+                 
